@@ -20,6 +20,5 @@ from public import views as public
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', public.day, name='day'),
-    path('demo', public.home, name='public'),
+    path('', public.home, name='public'),
 ]

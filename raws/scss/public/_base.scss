@@ -22,6 +22,11 @@ p, a, input, button, textarea, label, div{font-family: 'Poppins', sans-serif;}
 #nav{
 	$border-width: 2px;
 	$transition-time: 500ms;
+	#logo{
+		img{height: 42px;margin: 3px 0;@include float-left;}
+		p{@include float-left;margin-left: 8px;font-weight: bold;line-height: 48px;font-size: 26px;}
+		&:after{clear: both;display: block;content: ""}
+	}
 	ul{
 		li{@include inline-block;line-height: 48px;margin: 0 4px;
 			p{padding: 7px 12px;display: inline;position: relative;color: #333;cursor: pointer;
@@ -114,10 +119,10 @@ p, a, input, button, textarea, label, div{font-family: 'Poppins', sans-serif;}
 }
 
 #started-button{text-align: center;margin-top: 18px;
-	#start-request{padding: 8px 12px;background-color: $green;color: #fff;display: inline;cursor: pointer;}
+	#start-request{padding: 8px 12px;background-color: $green;color: #fff;@include inline-block;cursor: pointer;margin-bottom: 35px;}
 }
 
-#services{width: 100%;height: 330px;margin-top: 355px;background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/wireframe.jpg');position: relative;@include background-size(cover);background-position: center;
+#services{width: 100%;margin-top: 355px;background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/wireframe.jpg');position: relative;@include background-size(cover);background-position: center;
 	#testimonial{width: calc(100% - 30px);position: absolute;bottom: calc(100% - 40px);background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/dist/images/green.jpg');left: 15px;@include border-radius(5px);background-position: center;@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);
 		#testimonial-section-title{text-align: center;font-size: 32px;font-weight: bold;margin-top: 22px;color: #fff;}
 		#testimonial-container{width: calc(100% - 30px);max-width: 850px;margin: 6px auto 30px auto;
@@ -246,15 +251,30 @@ p, a, input, button, textarea, label, div{font-family: 'Poppins', sans-serif;}
 }
 
 #plans{
-	#plans-section-title{text-align: center;font-size: 32px;font-weight: bold;margin-top: 42px;color: #333;margin-bottom: 20px;}
+	#plans-section-title{text-align: center;font-size: 32px;font-weight: bold;margin-top: 42px;color: #333;margin-bottom: 10px;}
 	#plans-row{
-		.plan-card{background-color: #fff;padding: 15px;}
-		.plan{width: 33.33%;@include float-left;text-align: center;padding: 0 15px;
-			.plan-title{font-size: 18px;font-weight: bold;}
+		.plan-card{padding: 15px;}
+		.plan{width: 33.33%;@include float-left;text-align: center;padding: 0 0px;
+			.plan-title{font-size: 14px;line-height: 33px;font-weight: bold;color: #fff;background-color: #333;
+			}
+		}
+		.plan-content{padding: 0 15px;background-color: #fff;background-size: cover;@include box-shadow(0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2));
+			&.silver{background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/silver.jpg');}
+			&.gold{background: url('/dist/images/gold.jpg');}
+			&.platinum{background: url('/dist/images/platinum.jpg');}
 		}
 		&:after{clear: both;display: block;content: ""}
 	}
-	.plan-price{font-size: 32px;}
+	.plan-price{font-size: 15px;font-weight: bold;padding-bottom: 12px;color: #fff;}
+	ul{padding-top: 8px;}
+	li{margin: 5px 0;margin: 5px 0;border-bottom: 1px solid #eee;margin-bottom: 8px;padding-bottom: 8px;color: #fff;
+		&:last-child{border-bottom: none;}
+	}
+	.read-more{text-decoration: underline;color: #fff;font-size: 12px;cursor: pointer;}
 }
 
-#footer{width: 100%;height: 260px;background-color: #fff;margin-top: 60px;}
+.plan-modal{position: fixed;top: 0;left: 0;display: none;}
+
+#footer{width: 100%;background-color: #fff;margin-top: 20px;padding-top: 12px;padding-bottom: 12px;
+	#footer-copy{border-top: 1px solid #ccc;padding-top: 8px;margin-top: 8px;padding-bottom: 12px;padding-left: 10px;padding-right: 10px;p, i{font-size: 11px;color: #444}}
+}
