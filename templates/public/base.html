@@ -9,8 +9,8 @@
 		<meta name="theme-color" content="#4f3cbf" />
 		<meta name="keywords" content="{% block keywords %}{% endblock %}" />
 		<meta name="description" content="{% block description %}{% endblock %}" />
-		<link rel="shortcut icon" href="assets/favicon.png" />
-		<link rel="apple-touch-icon" href="assets/favicon.png" />
+		<link rel="shortcut icon" href="{% static 'images/logo.png' %}" />
+		<link rel="apple-touch-icon" href="{% static 'images/logo.png' %}" />
 		<link rel="stylesheet" href="{% static 'css/public.css' %}" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
@@ -19,7 +19,18 @@
 		<div id="content">
 			{% block content %}{% endblock %}
 		</div>
-		<div id="footer"></div>
+		<div id="footer">
+			<div class="container">
+				<div id="footer-row">
+					<div class="footer-col">
+						<p class="footer-col-title">Company</p>
+					</div>
+				</div>
+				<div id="footer-copy">
+					<p><i class="far fa-copyright"></i> 2018 Blockpoax. All rights reserved</p>
+				</div>
+			</div>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script><script src="{% static 'scripts/public.js' %}"></script>
 	</body>
 </html>

@@ -12,7 +12,10 @@
 			<div class="container">
 				<div class="mrow">
 					<div class="left">
-						<div id="logo"></div>
+						<div id="logo">
+							<img src="http://www.fastlaneus.com/blog/wp-content/uploads/2017/03/blockchain.png" alt="logo">
+							<p>Blockpoax</p>
+						</div>
 					</div>
 					<div class="right">
 						<ul>
@@ -292,26 +295,26 @@
 				<div class="request-row">
 					<div class="field">
 						<label for="project-name">Contact name</label>
-						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text">
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Full name" id="project-name" type="text">
 					</div>
 					<div class="field">
-						<label>Email ID</label>
+						<label>Contact Email</label>
 						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email ID" type="email">
 					</div>
 				</div>
 				<div class="request-row">
 					<div class="field">
 						<label>Telegram ID</label>
-						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Telegram ID" type="text">
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="@username" type="text">
 					</div>
 					<div class="field">
 						<label>Exchanges listed</label>
-						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Exchanges names" type="text">
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Names of exchanges" type="text">
 					</div>
 				</div>
 				<div class="field">
 					<label>Description ( optional )</label>
-					<textarea placeholder="Please explain a little more about you..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+					<textarea placeholder="Please explain a little more about your project..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
 				</div>
 				<div class="field">
 					<label>Services required</label>
@@ -404,18 +407,95 @@
 	<p id="plans-section-title">Plans</p>
 	<div class="container">
 		<div class="mrow" id="plans-row">
-			{% for i in 'abc' %}
 			<div class="plan">
 				<div class="plan-card">
-					<p class="plan-title">Silver</p>
-					<ul>
-						<li></li>
-					</ul>
-					<p class="plan-price">30 Ethers</p>
+					<p class="plan-title silver">Silver</p>
+					<div class="plan-content silver">
+						<ul>
+							<li>SEO of project website</li>
+							<li>BitcoinTalk ANN thread / Bounty creation and management</li>
+							<li>Bounty listing on websites</li>
+							<li>SEO optimized content planning and creation</li>
+							<li>Broadcasting Press Release on 200+ news websites</li>
+							<li>
+								<p class="read-more">See full package</p>
+							</li>
+						</ul>
+						<p class="plan-price"><span>Price :</span> 25 ETH</p>
+					</div>
 				</div>
 			</div>
-			{% endfor %}
+			<div class="plan">
+				<div class="plan-card">
+					<p class="plan-title gold">Gold</p>
+					<div class="plan-content gold">
+						<ul>
+							<li>SEO of project website</li>
+							<li>BitcoinTalk ANN thread / Bounty creation and management</li>
+							<li>Bounty listing on all websites</li>
+							<li>SEO optimized content planning and creation</li>
+							<li>Broadcasting Press Release on 700+ news websites</li>
+							<li>
+								<p class="read-more">See full package</p>
+							</li>
+						</ul>
+						<p class="plan-price"><span>Price :</span> 40 ETH</p>
+					</div>
+				</div>
+			</div>
+			<div class="plan">
+				<div class="plan-card">
+					<p class="plan-title platinum">Platinum</p>
+					<div class="plan-content platinum">
+						<ul>
+							<li>SEO of project website</li>
+							<li>BitcoinTalk ANN thread / Bounty creation and management</li>
+							<li>Bounty listing on all websites</li>
+							<li>SEO optimized content planning and creation</li>
+							<li>Broadcasting Press Release on 2200+ news websites</li>
+							<li>
+								<p class="read-more">See full package</p>
+							</li>
+						</ul>
+						<p class="plan-price"><span>Price :</span> 60 ETH</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
+<div class="plan-modal">
+	<div class="plan-vertical">
+		<div class="plan-container">
+			<div class="plan-modal-header">
+				<p>Silver</p>
+			</div>
+			<div class="plan-modal-features">
+				<ul>
+					<li>SEO of project website</li>
+					<li>BitcoinTalk ANN thread / Bounty creation and management</li>
+					<li>Bounty listing on all websites</li>
+					<li>SEO optimized content planning and creation</li>
+					<li>Broadcasting Press Release on 200+ news websites</li>
+					<li>Publication on 5+ Cryptocurrency news websites</li>
+					<li>Total PR outreach of more than 1 million</li>
+					<li>Reddit trending in Crypto sub-reddits</li>
+					<li>Twitter engagement with 3k followers and outreach of 150k</li>
+					<li>Facebook traction 3k followers and 150k outreach</li>
+					<li>Youtube engagement with 20k+ views</li>
+					<li>Telegram community buildup (6k+ members)</li>
+					<li>Total social media reach of 1.5M+</li>
+					<li>Social channels management ( 3+ posts per day)</li>
+					<li>3 ICO reviews</li>
+					<li>1 Expert ICO review</li>
+					<li>Google ads setup with targetted keywords</li>
+					<li>Promotion in crypto Facebook, Twitter and Telgram groups and channels</li>
+				</ul>
+			</div>
+			<div class="plan-modal-footer"></div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
