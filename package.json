@@ -1,11 +1,29 @@
 {
   "name": "socserv",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "webpack --mode production",
+    "watch": "webpack --watch --mode production"
   },
-  "author": "",
-  "license": "UNLICENSED"
+  "author": "Jatin Lal",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/jatinlal1994/icowebsite.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.com/jatinlal1994/icowebsite/issues"
+  },
+  "homepage": "https://gitlab.com/jatinlal1994/icowebsite#README",
+  "description": "",
+  "dependencies": {
+    "npm": "^6.4.1",
+    "particles.js": "^2.0.0",
+    "particlesjs": "^2.2.3"
+  },
+  "devDependencies": {
+    "webpack-obfuscator": "^0.18.0",
+    "webpack-sources": "^1.3.0"
+  }
 }

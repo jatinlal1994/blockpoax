@@ -17,28 +17,54 @@
 					<div class="right">
 						<ul>
 							<li>
-								<a href="#">
-									<p><span>Home</span></p>
-								</a>
+								<p class="scroll-to" data-scroll-to="features">
+									<span>Features</span>
+								</p>
 							</li>
 							<li>
-								<a href="#">
-									<p><span>Home</span></p>
-								</a>
+								<p class="scroll-to" data-scroll-to="services">
+									<span>Testimonial</span>
+								</p>
 							</li>
 							<li>
-								<a href="#">
-									<p><span>Home</span></p>
-								</a>
+								<p class="scroll-to" data-scroll-to="services">
+									<span>Services</span>
+								</p>
 							</li>
 							<li>
-								<a href="#">
-									<p><span>Home</span></p>
-								</a>
+								<p class="scroll-to" data-scroll-to="tilt-section">
+									<span>Request quotation</span>
+								</p>
+							</li>
+							<li>
+								<p class="scroll-to" data-scroll-to="prices">
+									<span>Prices</span>
+								</p>
 							</li>
 						</ul>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="home-banner-content">
+			<div id="home-banner-left">
+				<div id="home-banner-vertical">
+					<div id="home-banner-container">
+						<p class="home-banner-title">ICO Marketing, Simplified</p>
+						<p class="home-banner-p">Best ICO Marketing Strategies for running a successful ICO. We build more powerful and flexible strategies to accomplish a successful ICO.</p>
+						<a href="https://t.me/ngage" target="_blank" class="contact-on-telegram">
+							<i class="fab fa-telegram-plane"></i>
+							<p>Contact on telegram</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="home-banner-image">
+			<div id="home-banner-image-vertical">
+				<img src="{% static 'images/board-meeting.png' %}" alt="meeting-image">
 			</div>
 		</div>
 	</div>
@@ -69,10 +95,10 @@
 						<img src="{% static 'images/ppc.svg' %}">
 					</div>
 					<div class="feature-title">
-						<p>Pay per click</p>
+						<p>Community Management</p>
 					</div>
 					<div class="feature-content">
-						<p>We run pay per click campaigns on various platforms. Pay per click provide people</p>
+						<p>We work to expand your followers and growing your social communities such as telegram, Facebook Etc. It includes communication with targeted audience and to build trust and transparency around the project. We ensure announcements are placed strategically.</p>
 					</div>
 				</div>
 			</div>
@@ -98,7 +124,7 @@
 						<p>Press release</p>
 					</div>
 					<div class="feature-content">
-						<p>Get publication of your events, notification, description and more on thousands of websites </p>
+						<p>A public relations initiative that touts a business's innovations can attract attention, investors and potential business partners and When your ICO will be published and highlighted in reputed news websites and crypto websites, it will help you get more exposure and places you in front of your target audience.</p>
 					</div>
 				</div>
 			</div>
@@ -111,7 +137,7 @@
 						<p>Proper planning</p>
 					</div>
 					<div class="feature-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula facilisis dignissim. Nam eu justo tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus non dictum felis, at placerat nisi. Maecenas a ante auctor, eleifend nulla laoreet, lobortis ipsum. Cras egestas placerat lectus id rhoncus.</p>
+						<p>Bitcointalk and Reddit are hubs for all crypto traders and investors. We provide you with shoutouts on such platforms , manage communities on Bitcointalk. A strategised set of content will trend in crypto related subreddits which will bring your ICO in the eyes of potential crypto investors.</p>
 					</div>
 				</div>
 			</div>
@@ -121,10 +147,10 @@
 						<img src="{% static 'images/public.svg' %}">
 					</div>
 					<div class="feature-title">
-						<p>Crowd sale</p>
+						<p>Bounty creation and management</p>
 					</div>
 					<div class="feature-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula facilisis dignissim. Nam eu justo tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus non dictum felis, at placerat nisi. Maecenas a ante auctor, eleifend nulla laoreet, lobortis ipsum. Cras egestas placerat lectus id rhoncus.</p>
+						<p>We help you with creating and promoting your bounty among bounty hunters who start posting and sharing about your ICO through their profile and engage their follower about it to spread awareness about your ICO events and sales and to bring the organic audience. So, your ICO gains momentum and reaches to the maximum number of potential investors.</p>
 					</div>
 				</div>
 			</div>
@@ -132,12 +158,12 @@
 	</div>
 </div>
 
-<div id="dual-test-section">
+<div id="services">
 	<div id="testimonial">
 		<p id="testimonial-section-title">Testimonials</p>
 		<div id="testimonial-container" class="mrow">
 			<div id="testimonial-image" class="left">
-				<img src="https://www.sbp-creative.com/wp-content/uploads/2017/01/profile-placeholder.png" alt="testimonial-image">
+				<img src="{% static 'images/sam.jpg' %}" alt="testimonial-image">
 			</div>
 			<div id="testimonial-content" class="left">
 				<div id="testimonial-vertical">
@@ -145,10 +171,10 @@
 						<p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a ante at ex accumsan pulvinar id ut nibh. Curabitur nec quam tortor. Ut vitae eleifend est. Praesent vitae ligula vitae felis tempor lacinia ac at tortor.<i class="fas fa-quote-right"></i></p>
 					</div>
 					<div id="sayer-name">
-						<p>Loren Ipsum</p>
+						<p>Sam Czertok</p>
 					</div>
 					<div id="sayer-desg">
-						<p>Loren, Impsum dolor</p>
+						<p>CEO, TokenAI</p>
 					</div>
 				</div>
 			</div>
@@ -158,7 +184,7 @@
 		<p id="dual-title">Lorem ipsum dolor</p>
 		<p id="dual-content">Duis sed dignissim tellus. Aenean fringilla congue orci, vitae varius velit interdum id. Curabitur luctus ipsum at ipsum tempus, ut mollis massa efficitur.</p>
 		<div id="started-button">
-			<p id="get-started"></p>
+			<p id="start-request">Request proposal</p>
 		</div>
 
 	</div>
@@ -239,7 +265,7 @@
 			<ul>
 				<li>A bot that will update a Google Sheet with details of members entering or leaving the group : First name, Last name, Username, Date & time.</li>
 				<li>Whenever any member from your group sends message containing abusive words or specific words that you don't want in your group, the message gets deleted and an admin from your group is notified. </li>
-				<li></li>
+				<li>A bot that will update a Google Sheet with details of members entering or leaving the group : First name, Last name, Username, Date & time.</li>
 			</ul>
 		</div>
 	</div>
@@ -252,49 +278,107 @@
 			</div>
 			<div id="request-form-content">
 				<p id="request-form-title">Request quotation from us</p>
-				<div class="field">
-					<label for="project-name">Token name</label>
-					<input placeholder="Token name" id="project-name" type="text">
+				<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+				<div class="request-row">
+					<div class="field">
+						<label for="project-name">Token name</label>
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text">
+					</div>
+					<div class="field">
+						<label>Token symbol</label>
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Symbol" type="text">
+					</div>
 				</div>
-				<div class="field">
-					<label>Token symbol</label>
-					<input placeholder="Symbol" type="text">
+				<div class="request-row">
+					<div class="field">
+						<label for="project-name">Contact name</label>
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text">
+					</div>
+					<div class="field">
+						<label>Email ID</label>
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email ID" type="email">
+					</div>
 				</div>
-				<div class="field">
-					<label for="project-name">Contact name</label>
-					<input placeholder="Token name" id="project-name" type="text">
-				</div>
-				<div class="field">
-					<label>Email ID</label>
-					<input placeholder="Email ID" type="email">
-				</div>
-				<div class="field">
-					<label>Telegram ID</label>
-					<input placeholder="Telegram ID" type="text">
+				<div class="request-row">
+					<div class="field">
+						<label>Telegram ID</label>
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Telegram ID" type="text">
+					</div>
+					<div class="field">
+						<label>Exchanges listed</label>
+						<input autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Exchanges names" type="text">
+					</div>
 				</div>
 				<div class="field">
 					<label>Description ( optional )</label>
 					<textarea placeholder="Please explain a little more about you..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
 				</div>
 				<div class="field">
-					<label>Social medias</label>
+					<label>Services required</label>
+					<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+					<div class="features-questions">
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-1" id="press-release-1" checked>
+							<label for="press-release-1"></label>
+							<p>Press release on financial, national and regional news websites</p>
+						</div>
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-2" id="press-release-2" checked>
+							<label for="press-release-2"></label>
+							<p>Press release on Cryptocurrency news websites</p>
+						</div>
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-7" id="press-release-7" checked>
+							<label for="press-release-7"></label>
+							<p>Premium publications on NASDAQ, Yahoo Finance, Forbes, World News, Digital Journal, etc.</p>
+						</div>
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-3" id="press-release-3" checked>
+							<label for="press-release-3"></label>
+							<p>Bounty creation and management</p>
+						</div>
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-4" id="press-release-4" checked>
+							<label for="press-release-4"></label>
+							<p>Search Engine Optimization of project website</p>
+						</div>
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-5" id="press-release-5" checked>
+							<label for="press-release-5"></label>
+							<p>ICO listing on token reviews websites</p>
+						</div>
+						<div class="feature-question">
+							<input type="checkbox" name="press-release-6" id="press-release-6" checked>
+							<label for="press-release-6"></label>
+							<p>Reviews on ICO listing websites</p>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<label>Social media outreach</label>
 					<div class="social-media-request">
-						<div class="social-media-question">Mark the social media communities that you are targetting.</div>
+						<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+						<ul class="request-form-list">
+							<li>Outreach to targetted audience on Twitter</li>
+							<li>Reachout to crypto audience on Facebook</li>
+							<li>Reddit trending in Cryptocurrency subreddits r/ethtrader, r/ethereum, r/cryptocurrency</li>
+							<li>Youtube marketing</li>
+						</ul>
 						<div class="request-social">
 							<div class="request-field">
-								<input id="request-facebook" type="checkbox">
+								<input id="request-facebook" type="checkbox" checked>
 								<label for="request-facebook">Facebook</label>
 							</div>
 							<div class="request-field">
-								<input id="request-reddit" type="checkbox">
+								<input id="request-reddit" type="checkbox" checked>
 								<label for="request-reddit">Reddit</label>
 							</div>
 							<div class="request-field">
-								<input id="request-twitter" type="checkbox">
+								<input id="request-twitter" type="checkbox" checked>
 								<label for="request-twitter">Twitter</label>
 							</div>
 							<div class="request-field">
-								<input id="request-youtube" type="checkbox">
+								<input id="request-youtube" type="checkbox" checked>
 								<label for="request-youtube">Youtube</label>
 							</div>
 						</div>
@@ -302,9 +386,13 @@
 				</div>
 				<div class="field">
 					<div class="submit-button">
-						<button type="submit">
+						<button type="submit" id="cancel-request">
+							<i class="fas fa-chevron-left"></i>	
+							Cancel
+						</button>
+						<button type="submit" id="submit-request">
 							Submit
-							<i class="fas fa-angle-right"></i>
+							<i class="fas fa-chevron-right"></i>
 						</button>
 					</div>
 				</div>
@@ -312,12 +400,22 @@
 		</div>
 	</div>
 </div>
-<script>
-	document.getElementById("proposal-request-button").onclick = function(){
-		document.getElementById('request-form').style.display = 'table';
-	}
-	document.getElementById("close-request-form").onclick = function(){
-		document.getElementById('request-form').style.display = 'none';
-	}
-</script>
+<div id="plans">
+	<p id="plans-section-title">Plans</p>
+	<div class="container">
+		<div class="mrow" id="plans-row">
+			{% for i in 'abc' %}
+			<div class="plan">
+				<div class="plan-card">
+					<p class="plan-title">Silver</p>
+					<ul>
+						<li></li>
+					</ul>
+					<p class="plan-price">30 Ethers</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
 {% endblock %}
