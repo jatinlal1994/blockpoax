@@ -1,10 +1,11 @@
+{% load static %}
 <div id="nav" class="black-nav">
 	<div class="container">
 		<div class="mrow">
 			<div class="left">
 				<div id="logo">
 					<a href="{% url 'home' %}">
-						<img src="http://www.fastlaneus.com/blog/wp-content/uploads/2017/03/blockchain.png" alt="logo">
+						<img src="{% static 'images/logo.png' %}" alt="logo">
 						<p>Blockpoax</p>
 					</a>
 				</div>
