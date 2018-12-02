@@ -14,6 +14,8 @@
 		<link rel="stylesheet" href="{% static 'css/public.css' %}" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
+		<link rel="prefetch" href="{% static 'images/check.png' %}">
+		<link rel="prefetch" href="{% static 'images/close.png' %}">
 	</head>
 	<body>
 		<div id="content">
@@ -22,15 +24,52 @@
 		<div id="footer">
 			<div class="container">
 				<div id="footer-row">
-					<div class="footer-col">
+					<div class="footer-col footer-col-one-four">
 						<p class="footer-col-title">Company</p>
+						<div class="link">
+							<a href="{% url 'about-us' %}">About Us</a>
+						</div>
+						<div class="link">
+							<a href="{% url 'privacy-policy' %}">Privacy Policy</a>
+						</div>
+						<div class="link">
+							<a href="{% url 'terms-of-service' %}">Terms of service</a>
+						</div>
+					</div>
+					<div class="footer-col footer-col-one-four">
+						<p class="footer-col-title">Support</p>
+						<div class="link">
+							<a href="{% url 'faqs' %}">FAQs</a>
+						</div>
+						<div class="link">
+							<a href="{% url 'contact-us' %}">Contact Us</a>
+						</div>
+					</div>
+					<div class="footer-col footer-col-one-two">
+						<p class="footer-col-title">Company</p>
+						<div class="footer-col-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel mauris eleifend ligula iaculis pharetra. Vestibulum hendrerit, ante eu consequat viverra, dui nibh tristique diam, eget scelerisque nisl quam quis leo.</p>
+						</div>
 					</div>
 				</div>
 				<div id="footer-copy">
-					<p><i class="far fa-copyright"></i> 2018 Blockpoax. All rights reserved</p>
+					<div id="footer-copy-left">
+						<p><i class="far fa-copyright"></i> 2018 Blockpoax. All rights reserved</p>
+					</div>
+					<div id="footer-copy-right">
+						<div class="footer-social-icon">
+							<a href="#"><i class="fab fa-facebook-square"></i></a>
+						</div>
+						<div class="footer-social-icon">
+							<a href="#"><i class="fab fa-twitter-square"></i></a>
+						</div>
+						<div class="footer-social-icon">
+							<a href="#"><i class="fab fa-linkedin"></i></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script><script src="{% static 'scripts/public.js' %}"></script>
+		<script src="{% static 'scripts//particles.js' %}"></script><script src="{% static 'scripts/public.js' %}"></script>
 	</body>
 </html>

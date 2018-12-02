@@ -1,0 +1,32 @@
+{% extends 'public/base.html' %}
+
+{% load static %}
+{% block keywords %}Blocketo - We take care of your ICO{% endblock %}
+
+{% block description %}{% endblock %}
+
+{% block content %}
+{% include 'public/components/nav.html' %}
+<div id="info-page-content">
+	<div class="container">
+		<div class="page-title">
+			<p>About Us</p>
+		</div>
+		<div class="page-content">
+			<div class="info-page-image">
+				<img src="{% static 'images/about-us.jpg' %}" alt="about-us-image">
+			</div>
+			<div class="info-page-text">
+				<p class="title">Great Team for You</p>
+				<p class="content">We are a team of professionals specialised in creating the most viable marketing model for your business and getting your projects in expertise hands to ensure faster and proper business growth.</p>
+				<p class="content">Our team strives to gain clients the exposure which they deserve for their innovations through our marketing services and taking a deep look at your assets before proceeding with a plan that makes sense for you, your brand, and your aspirations.</p>
+				<p class="content">Having a proper communication and marketing Strategy when doing an ICO and Post ICO is a necessity to stimulate trading and share price management.</p>
+				<p class="title">Professionals and Creative</p>
+				<p class="content">Our community management team will manage all your social media and answer all your investors and will respond to their concerns on time.</p>
+				<p class="content">Our specialties include growth hacking and targeting effective audience throughout the ICO process which is crucial to a successful crowdfunding.</p>
+				<p class="content">Further, Our team can guide you through the conception, design, and development of a fresh, clean, and visually stunning website for your company, as well as any additional digital assets necessary to increase the value of your product.</p>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
