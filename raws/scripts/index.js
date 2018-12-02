@@ -1,34 +1,35 @@
-document.getElementById("proposal-request-button").onclick = function(){
+if(document.getElementById("proposal-request-button")){document.getElementById("proposal-request-button").onclick = function(){
 	document.getElementById('request-form').style.display = 'table';
 	setTimeout(function(){
 		document.getElementById('request-form').classList.add('opened');
 	}, 10);
 	document.getElementsByTagName("body")[0].style.overflow = "hidden";
-}
+}}
 
-document.getElementById("start-request").onclick = function(){
+if(document.getElementById("start-request")){
+	document.getElementById("start-request").onclick = function(){
 	document.getElementById('request-form').style.display = 'table';
 	setTimeout(function(){
 		document.getElementById('request-form').classList.add('opened');
 	}, 10);
 	document.getElementsByTagName("body")[0].style.overflow = "hidden";
-}
+}}
 
-document.getElementById("close-request-form").onclick = function(){
+if(document.getElementById("close-request-form")){document.getElementById("close-request-form").onclick = function(){
 	document.getElementById('request-form').classList.remove('opened');
 	setTimeout(function(){
 		document.getElementById('request-form').style.display = 'none';
 	}, 510);
 	document.getElementsByTagName("body")[0].style.overflow = "auto";
-}
+}}
 
-document.getElementById("cancel-request").onclick = function(){
+if(document.getElementById("cancel-request")){document.getElementById("cancel-request").onclick = function(){
 	document.getElementById('request-form').classList.remove('opened');
 	setTimeout(function(){
 		document.getElementById('request-form').style.display = 'none';
 	}, 510);
 	document.getElementsByTagName("body")[0].style.overflow = "auto";
-}
+}}
 
 for (scroller of document.getElementsByClassName('scroll-to')){
 	scroller.onclick = function(){
@@ -61,6 +62,47 @@ for (input of document.getElementsByClassName('request-input')){
 				this.classList.remove('email-not-validated');
 			}
 		}
+	}
+}
+
+if(document.getElementById('gold-package')){
+	document.getElementById('gold-package').onclick = function(event){
+		document.getElementById('gold-package-modal').style.display = "table";
+		setTimeout(function(){
+			document.getElementById('gold-package-modal').classList.add("opened");
+			document.getElementsByTagName("body")[0].style.overflow = "hidden";
+		}, 10);
+	}
+}
+
+if(document.getElementById('silver-package')){
+	document.getElementById('silver-package').onclick = function(event){
+		document.getElementById('silver-package-modal').style.display = "table";
+		setTimeout(function(){
+			document.getElementById('silver-package-modal').classList.add("opened");
+			document.getElementsByTagName("body")[0].style.overflow = "hidden";
+		}, 10);
+	}
+}
+
+if(document.getElementById('platinum-package')){
+	document.getElementById('platinum-package').onclick = function(event){
+		document.getElementById('platinum-package-modal').style.display = "table";
+		setTimeout(function(){
+			document.getElementById('platinum-package-modal').classList.add("opened");
+			document.getElementsByTagName("body")[0].style.overflow = "hidden";
+		}, 10);
+	}
+}
+
+for (close of document.getElementsByClassName("plan-modal-close-icon")){
+	close.onclick = function(event){
+		box_selector = this.parentNode.parentNode.parentNode;
+		box_selector.classList.remove("opened");
+		document.getElementsByTagName("body")[0].style.overflow = "auto";
+		setTimeout(function(){
+			box_selector.style.display = "none";
+		}, 510);
 	}
 }
 

@@ -295,6 +295,7 @@ input, textarea, button{
 	ul{margin-left: 22px;margin-top: 8px;
 		li{font-size: 12.5px;list-style-type: disc;}
 	}
+	#start-request{margin-bottom: 15px;}
 }
 
 .plan-modal{position: fixed;top: 0;left: 0;display: none;}
@@ -358,6 +359,27 @@ input, textarea, button{
 		&.footer-col-one-two{width: 50%;}
 	}
 	&:after{clear: both;display: block;content: ""}
+}
+
+.plan-modal{width: 100vw;height: 100vh;position: fixed;top: 0;left: 0;@include opacity(0);z-index: 5;display: none;@include transition(500ms);background-color: rgba(0,0,0,0.5);
+	.plan-vertical{display: table-cell;vertical-align: middle;
+		.plan-container{width: calc(100% - 30px);margin: 0 auto;max-width: 500px;background-color: #fff;min-height: 400px;text-align: center;@include border-radius(5px);overflow: hidden;@include scale(1.2);@include transition(500ms);position: relative;
+			.plan-modal-close-icon{position: absolute;top: 5px;right: 12px;cursor: pointer;}
+		}
+		.plan-modal-header{background-color: #eee;line-height: 34px;font-weight: bold;}
+		.plan-modal-features{padding: 15px;}
+		.plan-price-title{font-size: 13px;margin-bottom: 6px;margin-top: 10px;font-weight: bold;}
+		ul{padding-bottom: 8px;
+			li{border-bottom: 1px solid #ddd;margin-bottom: 5px;padding-bottom: 5px;font-size: 13px;
+				&:last-child{border-bottom: none;}
+			}
+		}
+		.plan-price{font-size: 32px;text-align: center;margin-top: 3px;line-height: 24px;}
+		.plan-price-container{text-align: center;background-color: #eee;padding: 5px 20px 20px 20px;@include inline-block;@include border-radius(5px);}
+	}
+	&.opened{@include opacity(1);
+		.plan-container{@include scale(1);}
+	}
 }
 
 @media(max-width: 768px){
