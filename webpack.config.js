@@ -6,10 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist/scripts'),
     filename: 'public.js'
-  },
+  }/*,
   plugins: [
     new JavaScriptObfuscator ({
       rotateUnicodeArray: true
     })
-  ]
+  ]*/
 };

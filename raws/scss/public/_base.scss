@@ -382,6 +382,11 @@ input, textarea, button{
 	}
 }
 
+#success-message{position: fixed;top: 0;left: 0;width: 100vw;z-index: 10;background: #4CAF50;padding: 0 15px;@include translate(0px, 0px);@include transition(500ms);
+	p{color: #fff;line-height: 40px;}
+	&.closing{@include translate(0px, -40px);}
+}
+
 @media(max-width: 768px){
 	#home-banner{height: unset;
 		#home-banner-content{width: calc(100% - 30px);}

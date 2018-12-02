@@ -15,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'public',
 ]
 
 MIDDLEWARE = [
@@ -32,6 +33,8 @@ MIDDLEWARE = [
 HTML_MINIFY = True
 
 ROOT_URLCONF = 'socserv.urls'
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 TEMPLATES = [
     {

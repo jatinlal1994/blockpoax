@@ -106,6 +106,16 @@ for (close of document.getElementsByClassName("plan-modal-close-icon")){
 	}
 }
 
+if (document.getElementById('success-message')){
+	element = document.getElementById('success-message');
+	setTimeout(function(){
+		element.classList.add('closing');
+		setTimeout(function(){
+			element.parentNode.removeChild(element);
+		}, 500);
+	}, 3000);
+}
+
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());

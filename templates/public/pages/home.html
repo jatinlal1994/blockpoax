@@ -1,6 +1,9 @@
 {% extends 'public/base.html' %}
 
 {% load static %}
+
+{% block title %}Blockpoax - We help you reach out to the mass audience{% endblock %}
+
 {% block keywords %}Blocketo - We take care of your ICO{% endblock %}
 
 {% block description %}{% endblock %}
@@ -465,6 +468,13 @@
 			<div class="plan-modal-footer"></div>
 		</div>
 	</div>
+</div>
+<div id="success-message">
+	{% if messages %}
+	    {% for message in messages %}
+	    <p>{{ message }}</p>
+	    {% endfor %}
+	{% endif %}
 </div>
 {% include 'public/components/request-form.html' %}
 {% endblock %}

@@ -7,123 +7,126 @@
 			<div id="request-form-content">
 				<p id="request-form-title">Request quotation from us</p>
 				<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
-				<div class="request-row">
+				<form method="post" action="{% url 'request-quotation' %}">
+					{% csrf_token %}
+					<div class="request-row">
+						<div class="field">
+							<label for="project-name">Token name</label>
+							<input name="token-name" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text">
+						</div>
+						<div class="field">
+							<label>Token symbol</label>
+							<input name="symbol" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Symbol" type="text">
+						</div>
+					</div>
+					<div class="request-row">
+						<div class="field">
+							<label for="project-name">Contact name</label>
+							<input name="contact-name" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Full name" id="project-name" type="text">
+						</div>
+						<div class="field">
+							<label>Contact Email</label>
+							<input name="email" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email ID" type="email">
+						</div>
+					</div>
+					<div class="request-row">
+						<div class="field">
+							<label>Telegram ID</label>
+							<input name="telegram-id" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="@username" type="text">
+						</div>
+						<div class="field">
+							<label>Exchanges listed</label>
+							<input name="exchanges-listed" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Names of exchanges" type="text">
+						</div>
+					</div>
 					<div class="field">
-						<label for="project-name">Token name</label>
-						<input class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text">
+						<label>Description ( optional )</label>
+						<textarea name="description" class="request-input" placeholder="Please explain a little more about your project..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
 					</div>
 					<div class="field">
-						<label>Token symbol</label>
-						<input class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Symbol" type="text">
-					</div>
-				</div>
-				<div class="request-row">
-					<div class="field">
-						<label for="project-name">Contact name</label>
-						<input class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Full name" id="project-name" type="text">
-					</div>
-					<div class="field">
-						<label>Contact Email</label>
-						<input class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email ID" type="email">
-					</div>
-				</div>
-				<div class="request-row">
-					<div class="field">
-						<label>Telegram ID</label>
-						<input class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="@username" type="text">
-					</div>
-					<div class="field">
-						<label>Exchanges listed</label>
-						<input class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Names of exchanges" type="text">
-					</div>
-				</div>
-				<div class="field">
-					<label>Description ( optional )</label>
-					<textarea class="request-input" placeholder="Please explain a little more about your project..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
-				</div>
-				<div class="field">
-					<label>Services required</label>
-					<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
-					<div class="features-questions">
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-1" id="press-release-1" checked>
-							<label for="press-release-1"></label>
-							<p>Press release on financial, national and regional news websites</p>
-						</div>
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-2" id="press-release-2" checked>
-							<label for="press-release-2"></label>
-							<p>Press release on Cryptocurrency news websites</p>
-						</div>
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-7" id="press-release-7" checked>
-							<label for="press-release-7"></label>
-							<p>Premium publications on NASDAQ, Yahoo Finance, Forbes, World News, Digital Journal, etc.</p>
-						</div>
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-3" id="press-release-3" checked>
-							<label for="press-release-3"></label>
-							<p>Bounty creation and management</p>
-						</div>
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-4" id="press-release-4" checked>
-							<label for="press-release-4"></label>
-							<p>Search Engine Optimization of project website</p>
-						</div>
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-5" id="press-release-5" checked>
-							<label for="press-release-5"></label>
-							<p>ICO listing on token reviews websites</p>
-						</div>
-						<div class="feature-question">
-							<input type="checkbox" name="press-release-6" id="press-release-6" checked>
-							<label for="press-release-6"></label>
-							<p>Reviews on ICO listing websites</p>
-						</div>
-					</div>
-				</div>
-				<div class="field">
-					<label>Social media outreach</label>
-					<div class="social-media-request">
+						<label>Services required</label>
 						<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
-						<ul class="request-form-list">
-							<li>Outreach to targetted audience on Twitter</li>
-							<li>Reachout to crypto audience on Facebook</li>
-							<li>Reddit trending in Cryptocurrency subreddits r/ethtrader, r/ethereum, r/cryptocurrency</li>
-							<li>Youtube marketing</li>
-						</ul>
-						<div class="request-social">
-							<div class="request-field">
-								<input id="request-facebook" type="checkbox" checked>
-								<label for="request-facebook">Facebook</label>
+						<div class="features-questions">
+							<div class="feature-question">
+								<input type="checkbox" name="press-release-national" id="press-release-national" checked>
+								<label for="press-release-national"></label>
+								<p>Press release on financial, national and regional news websites</p>
 							</div>
-							<div class="request-field">
-								<input id="request-reddit" type="checkbox" checked>
-								<label for="request-reddit">Reddit</label>
+							<div class="feature-question">
+								<input type="checkbox" name="press-release-crypto" id="press-release-crypto" checked>
+								<label for="press-release-crypto"></label>
+								<p>Press release on Cryptocurrency news websites</p>
 							</div>
-							<div class="request-field">
-								<input id="request-twitter" type="checkbox" checked>
-								<label for="request-twitter">Twitter</label>
+							<div class="feature-question">
+								<input type="checkbox" name="press-release-premium" id="press-release-premium" checked>
+								<label for="press-release-premium"></label>
+								<p>Premium publications on NASDAQ, Yahoo Finance, Forbes, World News, Digital Journal, etc.</p>
 							</div>
-							<div class="request-field">
-								<input id="request-youtube" type="checkbox" checked>
-								<label for="request-youtube">Youtube</label>
+							<div class="feature-question">
+								<input type="checkbox" name="bounty" id="bounty" checked>
+								<label for="bounty"></label>
+								<p>Bounty creation and management</p>
+							</div>
+							<div class="feature-question">
+								<input type="checkbox" name="seo" id="seo" checked>
+								<label for="seo"></label>
+								<p>Search Engine Optimization of project website</p>
+							</div>
+							<div class="feature-question">
+								<input type="checkbox" name="reviews-listing" id="reviews-listing" checked>
+								<label for="reviews-listing"></label>
+								<p>ICO listing on token reviews websites</p>
+							</div>
+							<div class="feature-question">
+								<input type="checkbox" name="review-of-ico" id="review-of-ico" checked>
+								<label for="review-of-ico"></label>
+								<p>Reviews on ICO listing websites</p>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="field">
-					<div class="submit-button">
-						<button type="submit" id="cancel-request">
-							<i class="fas fa-chevron-left"></i>	
-							Cancel
-						</button>
-						<button type="submit" id="submit-request">
-							Submit
-							<i class="fas fa-chevron-right"></i>
-						</button>
+					<div class="field">
+						<label>Social media outreach</label>
+						<div class="social-media-request">
+							<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+							<ul class="request-form-list">
+								<li>Outreach to targetted audience on Twitter</li>
+								<li>Reachout to crypto audience on Facebook</li>
+								<li>Reddit trending in Cryptocurrency subreddits r/ethtrader, r/ethereum, r/cryptocurrency</li>
+								<li>Youtube marketing</li>
+							</ul>
+							<div class="request-social">
+								<div class="request-field">
+									<input name="request-facebook" id="request-facebook" type="checkbox" checked>
+									<label for="request-facebook">Facebook</label>
+								</div>
+								<div class="request-field">
+									<input name="request-reddit" id="request-reddit" type="checkbox" checked>
+									<label for="request-reddit">Reddit</label>
+								</div>
+								<div class="request-field">
+									<input name="request-twitter" id="request-twitter" type="checkbox" checked>
+									<label for="request-twitter">Twitter</label>
+								</div>
+								<div class="request-field">
+									<input name="request-youtube" id="request-youtube" type="checkbox" checked>
+									<label for="request-youtube">Youtube</label>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
+					<div class="field">
+						<div class="submit-button">
+							<button type="submit" id="cancel-request">
+								<i class="fas fa-chevron-left"></i>	
+								Cancel
+							</button>
+							<button type="submit" id="submit-request">
+								Submit
+								<i class="fas fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
