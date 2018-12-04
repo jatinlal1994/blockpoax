@@ -17,6 +17,7 @@ input, textarea, button{
 	&, &:hover, &:active, &:focus{border: none;outline: none;}
 }
 
+html{scroll-behavior: smooth;}
 .left{@include float-left;}
 .right{@include float-right;}
 .mrow:after{clear: both;display: block;content: ""}
@@ -130,7 +131,7 @@ input, textarea, button{
 }
 
 #services{width: 100%;margin-top: 355px;background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/wireframe.jpg');position: relative;@include background-size(cover);background-position: center;
-	#testimonial{width: calc(100% - 30px);position: absolute;bottom: calc(100% - 40px);background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/dist/images/green.jpg');left: 15px;@include border-radius(5px);background-position: center;@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);
+	#testimonial{width: calc(100% - 30px);position: absolute;bottom: calc(100% - 40px);background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/dist/images/green.jpg');left: 15px;@include border-radius(5px);background-position: center;@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);@include background-size(cover);
 		#testimonial-section-title{text-align: center;font-size: 32px;font-weight: bold;margin-top: 22px;color: #fff;}
 		#testimonial-container{width: calc(100% - 30px);max-width: 850px;margin: 6px auto 30px auto;
 			#testimonial-vertical{display: table-cell;vertical-align: middle;}
@@ -368,11 +369,11 @@ input, textarea, button{
 
 .plan-modal{width: 100vw;height: 100vh;position: fixed;top: 0;left: 0;@include opacity(0);z-index: 5;display: none;@include transition(500ms);background-color: rgba(0,0,0,0.5);
 	.plan-vertical{display: table-cell;vertical-align: middle;
-		.plan-container{width: calc(100% - 30px);margin: 0 auto;max-width: 500px;background-color: #fff;min-height: 400px;text-align: center;@include border-radius(5px);overflow: hidden;@include scale(1.2);@include transition(500ms);position: relative;
+		.plan-container{width: calc(100% - 30px);margin: 0 auto;max-width: 500px;background-color: #fff;text-align: center;@include border-radius(5px);overflow: hidden;@include scale(1.2);@include transition(500ms);position: relative;max-height: calc(100vh - 30px);
 			.plan-modal-close-icon{position: absolute;top: 5px;right: 12px;cursor: pointer;}
 		}
-		.plan-modal-header{background-color: #eee;line-height: 34px;font-weight: bold;}
-		.plan-modal-features{padding: 15px;}
+		.plan-modal-header{background-color: #eee;line-height: 34px;font-weight: bold;@include box-shadow(0 0px 5px 0 rgba(0,0,0,0.75));}
+		.plan-modal-features{padding: 15px;overflow-y: auto;}
 		.plan-price-title{font-size: 13px;margin-bottom: 6px;margin-top: 10px;font-weight: bold;}
 		ul{padding-bottom: 8px;
 			li{border-bottom: 1px solid #ddd;margin-bottom: 5px;padding-bottom: 5px;font-size: 13px;
