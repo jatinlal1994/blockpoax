@@ -4,7 +4,7 @@ from django.urls import path
 from public import views as public
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('blockpoax/', admin.site.urls),
     path('', public.home, name='home'),
     path('request-quotation', public.requestQuotation, name="request-quotation"),
     path('request-contact', public.requestContact, name="request-contact"),

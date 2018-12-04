@@ -32,4 +32,4 @@ class Contact(models.Model):
 	description = models.CharField(max_length = 16384)
 
 	def __str__(self):
-		return self.name + ", " + self.email
+		return self.name + ", " + self. email
