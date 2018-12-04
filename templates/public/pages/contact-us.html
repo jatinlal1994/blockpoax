@@ -13,34 +13,37 @@
 <div id="info-page-content" class="contact-us-form-page">
 	<div class="container">
 		<div class="contact-us-form">
-			<div class="contact-us-form-title">
-				Contact us
-			</div>
-			<div class="contact-us-form-hint">Blockpoax is working with many projects and their ICO's. If you have any questions about our services, please fill up the form below, or request a custom invoice from us.</div>
-			<div id="started-button">
-				<p id="start-request">Request custom proposal</p>
-			</div>
-			<div class="contact-us-three-row">
-				<div class="contact-us-fields contact-us-three">
-					<label>Full name</label>
-					<input type="email" placeholder="Full name">
+			<form action="{% url 'request-contact' %}" method="post">
+				{% csrf_token %}
+				<div class="contact-us-form-title">
+					Contact us
 				</div>
-				<div class="contact-us-fields contact-us-three">
-					<label>Email ID</label>
-					<input type="email" placeholder="Email ID">
+				<div class="contact-us-form-hint">Blockpoax is working with many projects and their ICO's. If you have any questions about our services, please fill up the form below, or request a custom invoice from us.</div>
+				<div id="started-button">
+					<p id="start-request">Request custom proposal</p>
 				</div>
-				<div class="contact-us-fields contact-us-three">
-					<label>Mobile number</label>
-					<input type="email" placeholder="Mobile number">
+				<div class="contact-us-three-row">
+					<div class="contact-us-fields contact-us-three">
+						<label>Full name</label>
+						<input name="full-name" type="text" placeholder="Full name" required>
+					</div>
+					<div class="contact-us-fields contact-us-three">
+						<label>Email ID</label>
+						<input name="email-id" type="email" placeholder="Email ID" required>
+					</div>
+					<div class="contact-us-fields contact-us-three">
+						<label>Mobile number</label>
+						<input name="mobile" type="text" placeholder="Mobile number">
+					</div>
 				</div>
-			</div>
-			<div class="contact-us-fields">
-				<label>Description</label>
-				<textarea type="email" placeholder="Please describe your query"></textarea>
-			</div>
-			<div class="contact-us-fields">
-				<button type="submit">Submit</button>
-			</div>
+				<div class="contact-us-fields">
+					<label>Description</label>
+					<textarea name="description" type="text" placeholder="Please describe your query" required></textarea>
+				</div>
+				<div class="contact-us-fields">
+					<button type="submit">Submit</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
