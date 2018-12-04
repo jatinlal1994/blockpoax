@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 
-from .models import ProposalRequest
+from .models import ProposalRequest, Contact
 
 def home(request):
 	return render(request, 'public/pages/home.html', {})
@@ -64,9 +64,20 @@ def requestQuotation(request):
 			youtube = youtube
 		)
 		response.save()
-		messages.add_message(request, messages.INFO, 'Your response has been sent succesfully')
+		messages.add_message(request, messages.INFO, 'We will send you a detailed quotation within next 24 hours')
 		return HttpResponseRedirect('/')
 
+def requestContact(request):
+	if request.method == 'POST':
+		name = request.POST.get('full-name')
+		email = request.POST.get('email-id')
+		mobile = request.POST.get('mobile')
+		description = request.POST.get('description')
+
+		contact = Contact(name = name, email = email, number = mobile, description = description)
+		contact.save()
+		messages.add_message(request, messages.INFO, 'Response submitted, we will get back to you ASAP')
+		return HttpResponseRedirect('/')
 
 def getBool(str):
 	if str == 'on':

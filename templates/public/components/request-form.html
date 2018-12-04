@@ -6,46 +6,47 @@
 			</div>
 			<div id="request-form-content">
 				<p id="request-form-title">Request quotation from us</p>
-				<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+				<div class="request-form-hint">If you want a quotation for customized solutions from us, then please fill up the form below according to your requirements, and we will get back to you with a suitable quotation on entered Telegram and Email ID.</div>
 				<form method="post" action="{% url 'request-quotation' %}">
 					{% csrf_token %}
 					<div class="request-row">
 						<div class="field">
 							<label for="project-name">Token name</label>
-							<input name="token-name" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text">
+							<input name="token-name" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Token name" id="project-name" type="text" required>
 						</div>
 						<div class="field">
 							<label>Token symbol</label>
-							<input name="symbol" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Symbol" type="text">
+							<input name="symbol" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Symbol" type="text" required>
 						</div>
 					</div>
 					<div class="request-row">
 						<div class="field">
 							<label for="project-name">Contact name</label>
-							<input name="contact-name" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Full name" id="project-name" type="text">
+							<input name="contact-name" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Full name" id="project-name" type="text" required>
 						</div>
 						<div class="field">
 							<label>Contact Email</label>
-							<input name="email" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email ID" type="email">
+							<input name="email" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Email ID" type="email" required>
 						</div>
 					</div>
 					<div class="request-row">
 						<div class="field">
 							<label>Telegram ID</label>
-							<input name="telegram-id" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="@username" type="text">
+							<input name="telegram-id" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="@username" type="text" required>
 						</div>
 						<div class="field">
 							<label>Exchanges listed</label>
-							<input name="exchanges-listed" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Names of exchanges" type="text">
+							<input name="exchanges-listed" class="request-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Names of exchanges" type="text" required>
 						</div>
 					</div>
 					<div class="field">
 						<label>Description ( optional )</label>
-						<textarea name="description" class="request-input" placeholder="Please explain a little more about your project..." autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+						<textarea name="description" class="request-input" placeholder="Please explain a little more about your project..." autocomplete="off" autocorrect="off" spellcheck="false" required></textarea>
 					</div>
 					<div class="field">
 						<label>Services required</label>
-						<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+						<div class="request-form-hint">A public relations initiative that touts a business's innovations can attract attention, investors and potential business partners and When your ICO will be published and highlighted in reputed news websites and crypto websites, it will help you get more exposure and places you in front of your target audience.</div>
+						<div class="request-form-hint second">We help you with creating and promoting your bounty among bounty hunters who start posting and sharing about your ICO through their profile and engage their follower about it to spread awareness about your ICO events and sales and to bring the organic audience. So, your ICO gains momentum and reaches to the maximum number of potential investors.</div>
 						<div class="features-questions">
 							<div class="feature-question">
 								<input type="checkbox" name="press-release-national" id="press-release-national" checked>
@@ -87,7 +88,7 @@
 					<div class="field">
 						<label>Social media outreach</label>
 						<div class="social-media-request">
-							<div class="request-form-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae purus vitae eros dignissim dignissim et in nunc. Cras venenatis fermentum turpis ultricies porttitor. Vestibulum nec velit ex. Integer dolor nibh, luctus sed felis a, egestas bibendum diam. Nulla facilisi. Quisque mollis nibh eget cursus convallis. Sed orci ex, auctor posuere faucibus ac, sollicitudin sed tortor. Phasellus nec diam in dui imperdiet tempor. Mauris condimentum interdum lobortis.</div>
+							<div class="request-form-hint">Presence on all Social media is a great way to gain targeted exposure and to connect with the audience. Our expertise team can make you trend on Facebook, Twitter, Youtube ,Russian social network Vkontakte and china's Wechat. Manage your all social media profile and generate traffic for your ICO.</div>
 							<ul class="request-form-list">
 								<li>Outreach to targetted audience on Twitter</li>
 								<li>Reachout to crypto audience on Facebook</li>
