@@ -9,6 +9,12 @@
 		<meta name="theme-color" content="#4f3cbf" />
 		<meta name="keywords" content="{% block keywords %}{% endblock %}" />
 		<meta name="description" content="{% block description %}{% endblock %}" />
+		<meta property="og:image" content="https://blockpoax.com/dist/images/logo.png" /> 
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://blockpoax.com" />
+		<meta property="og:title" content="Blockpoax - We help you reach out to the mass audience" />
+		<meta property="og:description" content="Blockpoax is an agency that is focussed on ICO promotions, fundraising and global outreach." />
+		{% block meta_tags %}{% endblock %}
 		<link rel="shortcut icon" href="{% static 'images/logo.png' %}" />
 		<link rel="apple-touch-icon" href="{% static 'images/logo.png' %}" />
 		<link rel="stylesheet" href="{% static 'css/public.css' %}" />
