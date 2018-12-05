@@ -136,7 +136,7 @@ html{scroll-behavior: smooth;}
 		#testimonial-container{width: calc(100% - 30px);max-width: 850px;margin: 6px auto 30px auto;
 			#testimonial-vertical{display: table-cell;vertical-align: middle;}
 			#testimonial-image{width: 30%;
-				img{width: 100%;@include border-radius(50%);@include box-shadow(-3px 3px 6px 0 rgba(0,0,0,0.2));}
+				svg, img{width: 60%;margin: 55px auto;color: #eee;display: block;}
 			}
 			#testimonial-content{width: 70%;padding: 20px;display: table;height: 262px;
 				#testimonial-words{margin-bottom: 15px;
