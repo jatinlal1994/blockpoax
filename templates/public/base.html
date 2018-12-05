@@ -4,24 +4,38 @@
 	<head>
 		<title>{% block title %}{% endblock %}</title>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="theme-color" content="#4f3cbf" />
+		<meta name="theme-color" content="#3494d4" />
+		<!-- SEO Meta Tags -->
 		<meta name="keywords" content="{% block keywords %}{% endblock %}" />
 		<meta name="description" content="{% block description %}{% endblock %}" />
-		<meta property="og:image" content="https://blockpoax.com/dist/images/logo.png" /> 
+		<!-- Schema.org markup for Google+ -->
+		<meta itemprop="name" content="Blockpoax - We help you reach out to the mass audience" />
+		<meta itemprop="description" content="Blockpoax is an agency that is focussed on ICO promotions, fundraising and global outreach. We provide numerous solutions that are based on Cryptocurrencies." />
+		<meta itemprop="image" content="https://blockpoax.com/dist/images/blockchain_large.png" />
+		<!-- Open Graph Tags -->
+		<meta property="og:image" content="https://blockpoax.com/dist/images/blockchain_large.png" /> 
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://blockpoax.com" />
 		<meta property="og:title" content="Blockpoax - We help you reach out to the mass audience" />
 		<meta property="og:description" content="Blockpoax is an agency that is focussed on ICO promotions, fundraising and global outreach." />
+		<!-- Twitter Card Tags -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@blockpoax" />
+		<meta name="twitter:title" content="Blockpoax - We help you reach out to the mass audience" />
+		<meta name="twitter:description" content="Blockpoax is an agency that is focussed on ICO promotions, fundraising and global outreach." />
+		<meta name="twitter:creator" content="@blockpoax" />
+		<meta name="twitter:image" content="https://blockpoax.com/dist/images/blockchain_large.png" />
 		{% block meta_tags %}{% endblock %}
+		<link rel="icon" sizes="192x192" href="{% static 'images/blockpoax_medium.png' %}">
 		<link rel="shortcut icon" href="{% static 'images/logo.png' %}" />
 		<link rel="apple-touch-icon" href="{% static 'images/logo.png' %}" />
 		<link rel="stylesheet" href="{% static 'css/public.css' %}" />
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet">
-		<link rel="prefetch" href="{% static 'images/check.png' %}">
-		<link rel="prefetch" href="{% static 'images/close.png' %}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet" />
+		<link rel="prefetch" href="{% static 'images/check.png' %}" />
+		<link rel="prefetch" href="{% static 'images/close.png' %}" />
 	</head>
 	<body>
 		<div id="content">
