@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from socserv.settings import BASE_DIR
 from django.contrib import messages
 
 from .models import ProposalRequest, Contact
@@ -21,6 +22,9 @@ def faqs(request):
 
 def contactUs(request):
 	return render(request, 'public/pages/contact-us.html', {})
+
+def sitemap(request):
+	return render(request, 'sitemap.xml', {}, content_type="application/xhtml+xml")
 
 def requestQuotation(request):
 	if request.method == 'POST':

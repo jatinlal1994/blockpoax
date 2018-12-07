@@ -13,4 +13,5 @@ urlpatterns = [
     path('terms-of-service', public.termsOfService, name='terms-of-service'),
     path('contact-us', public.contactUs, name='contact-us'),
     path('faqs', public.faqs, name='faqs'),
+    path('sitemap.xml', public.sitemap),
 ]
