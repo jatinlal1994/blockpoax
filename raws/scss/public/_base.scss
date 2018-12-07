@@ -409,6 +409,10 @@ html{scroll-behavior: smooth;}
 	#tilt-section #tilt-right{padding: 30px 20px;}
 	#tilt-section #tilt-left:before{display: none;}
 	#services{margin-top: 528px;}
+	.contact-us-three-row{margin: 0px 0px;}
+	.contact-us-three-row .contact-us-three{width: 100%;margin: 0px;}
+	.plan-modal .plan-vertical .plan-container{max-height: 70vh;}
+	.plan-modal .plan-vertical .plan-modal-features{max-height: calc(70vh - 34px);}
 	#nav{
 		.right{display: none;}
 	}
