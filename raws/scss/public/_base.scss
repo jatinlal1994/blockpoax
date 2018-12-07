@@ -67,6 +67,7 @@ html{scroll-behavior: smooth;}
 					&.home-banner-p{font-size: 15px;font-weight: bold;margin-top: 8px;color: #555;}
 				}
 				.contact-on-telegram{background-color: #0088cc;padding: 8px 12px;margin-left: 5px;margin-top: 20px;@include inline-block;
+					svg{height: 16px;vertical-align: sub;color: #fff;margin-right: 9px;}
 					i{margin-right: 8px;}
 					p, i{color: #fff;display: inline;font-size: 15px;}
 				}
@@ -88,7 +89,7 @@ html{scroll-behavior: smooth;}
 		.feature-col{width: 33.33%;padding: 0 15px;margin-top: 45px;margin-bottom: 15px;
 			.feature-content{width: 100%;
 				.feature-icon{text-align: left;
-					img{width: 55px;}
+					img, svg{width: 55px;height: 55px;}
 				}
 				.feature-title{
 					p{font-size: 13px;font-weight: bold;margin-bottom: 4px;margin-top: 12px;}
@@ -110,7 +111,7 @@ html{scroll-behavior: smooth;}
 	.social-site{width: 25%;padding: 10px;
 		.social-box{background-color: #fff;padding: 8px;@include border-radius(5px);@include box-shadow(0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2));}
 		.social-icon{text-align: right;padding: 4px 4px;height: 56px;
-			i{font-size: 48px;@include float-right;color: #fff;}
+			i, svg{font-size: 48px;@include float-right;color: #fff;width: 42px;}
 			p{@include float-left;font-size: 24px;padding: 6px;font-weight: 500;color: #333;}
 			.fa-facebook-square{color: #3b5998;}
 			.fa-twitter-square{color: #1da1f2;}
@@ -119,10 +120,10 @@ html{scroll-behavior: smooth;}
 		.social-content{padding: 6px 8px;margin-top: 5px;
 			.social-text{font-size: 12.5px;color: #555;}
 		}
-		#social-instagram-image{width: 42px;padding: 3px 0;}
+		#social-instagram-image, .social-instagram-image{width: 42px;padding: 3px 0;}
 	}
 	.social-more{text-align: right;
-		i{font-size: 28px;margin: 0 8px;color: #999;}
+		i, svg{font-size: 28px;margin: 0 8px;color: #999;width: 28px;height: 28px;vertical-align: middle;}
 	}
 }
 
@@ -131,7 +132,8 @@ html{scroll-behavior: smooth;}
 }
 
 #services{width: 100%;margin-top: 355px;background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/wireframe.jpg');position: relative;@include background-size(cover);background-position: center;
-	#testimonial{width: calc(100% - 30px);position: absolute;bottom: calc(100% - 40px);background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/dist/images/green.jpg');left: 15px;@include border-radius(5px);background-position: center;@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);@include background-size(cover);
+	#testimonial{width: calc(100% - 30px);position: absolute;bottom: calc(100% - 40px);left: 15px;@include border-radius(5px);background-position: center;@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);@include background-size(72px);background-color: #51998c;
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm20 0a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM10 37a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm10-17h20v20H20V20zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14z' fill='%2377d6c5' fill-opacity='0.36' fill-rule='evenodd'/%3E%3C/svg%3E");
 		#testimonial-section-title{text-align: center;font-size: 32px;font-weight: bold;margin-top: 22px;color: #fff;}
 		#testimonial-container{width: calc(100% - 30px);max-width: 850px;margin: 6px auto 30px auto;
 			#testimonial-vertical{display: table-cell;vertical-align: middle;}
@@ -156,7 +158,8 @@ html{scroll-behavior: smooth;}
 		}
 	}
 }
-#dual-section-more{margin-top: 30px;
+#dual-section-more{margin-top: 30px;background-color: #1f546b;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23060935' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-size: 80px;
 	#dual-title{text-align: center;font-size: 22px;font-weight: bold;padding-top: 62px;color: #fff;margin-bottom: 18px;}
 	#dual-content{width: calc(100% - 30px);max-width: 500px;color: #f6f6f6;margin: 0 auto;text-align: center;}
 }
@@ -182,7 +185,7 @@ html{scroll-behavior: smooth;}
 	}
 	#tilt-right{padding-left: 60px;
 		.tilt-telegram-icon{font-size: 48px;
-			i{color: #fff;}
+			i, svg{color: #fff;width: 42px;height: 48px;vertical-align: middle;}
 		}
 		.tilt-telegram-offer{
 			p{color: #fff;font-size: 16px;font-weight: bold;}
@@ -266,6 +269,12 @@ html{scroll-behavior: smooth;}
 			&.email-not-validated{border-left: 7px solid $dark-red;}
 		}
 	}
+}
+
+.quote-left{margin-right: 1px;}
+.quote-right{margin-left: 4px;}
+.quote-left, .quote-right{
+	svg{width: 10px;vertical-align: top;}
 }
 
 #plans{padding-bottom: 20px;
