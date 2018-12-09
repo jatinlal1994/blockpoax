@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from socserv.settings import BASE_DIR
 from django.contrib import messages
+from django.core.mail import send_mail
 
 from .models import ProposalRequest, Contact
 
@@ -68,6 +69,14 @@ def requestQuotation(request):
 			youtube = youtube
 		)
 		response.save()
+
+		send_mail(
+		    'Thanks for requesting quotation on Blockpoax',
+		    'Your request has been recorded succesfully, we will get back to you ASAP.',
+		    'admin@blockpoax.com',
+		    ['jatinlal1994@gmail.com'],
+		    fail_silently=False,
+		)
 		messages.add_message(request, messages.INFO, 'We will send you a detailed quotation within next 24 hours')
 		return HttpResponseRedirect('/')
 

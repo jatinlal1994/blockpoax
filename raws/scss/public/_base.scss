@@ -53,6 +53,11 @@ html{scroll-behavior: smooth;}
 		}
 	}
 }
+
+span{
+	&.theme-span{color: #2d8fd4;}
+}
+
 #home-banner{height: 650px;padding-bottom: 25px;background-position: center;position: relative;
 	canvas{position: absolute;top: 0;left: 0;z-index: -1;background-color: #ccc;}
 	.container{height: calc(100% - 48px);
@@ -131,7 +136,7 @@ html{scroll-behavior: smooth;}
 	#start-request{padding: 8px 12px;background-color: $green;color: #fff;@include inline-block;cursor: pointer;margin-bottom: 35px;@include box-shadow(-2px 2px 5px 0px rgba(0,0,0,0.15));}
 }
 
-#services{width: 100%;margin-top: 355px;background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/wireframe.jpg');position: relative;@include background-size(cover);background-position: center;
+#services{width: 100%;margin-top: 355px;position: relative;@include background-size(cover);background-position: center;
 	#testimonial{width: calc(100% - 30px);position: absolute;bottom: calc(100% - 40px);left: 15px;@include border-radius(5px);background-position: center;@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);@include background-size(72px);background-color: #51998c;
 background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm20 0a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM10 37a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm10-17h20v20H20V20zm10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14z' fill='%2377d6c5' fill-opacity='0.36' fill-rule='evenodd'/%3E%3C/svg%3E");
 		#testimonial-section-title{text-align: center;font-size: 32px;font-weight: bold;margin-top: 22px;color: #fff;}
@@ -158,12 +163,21 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
 		}
 	}
 }
-#dual-section-more{margin-top: 30px;background-color: #1f546b;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23060935' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-size: 80px;
+#dual-section-more{margin-top: 30px;background-color: #1f546b;background-image: url("/dist/images/earth-globe.svg");background-size: 40%;background-repeat: no-repeat;background-position: right 20px top 20px;-webkit-animation: mymove 2.4s infinite infinite ease-in-out;animation: mymove 2.4s infinite ease-in-out;
 	#dual-title{text-align: center;font-size: 22px;font-weight: bold;padding-top: 62px;color: #fff;margin-bottom: 18px;}
 	#dual-content{width: calc(100% - 30px);max-width: 500px;color: #f6f6f6;margin: 0 auto;text-align: center;}
 }
+@-webkit-keyframes mymove {
+    0% {background-position: right 20px top 20px;}
+    50% {background-position: right 20px top 32px;}
+    100% {background-position: right 20px top 20px;}
+}
 
+@keyframes mymove {
+    0% {background-position: right 20px top 20px;}
+    50% {background-position: right 20px top 32px;}
+    100% {background-position: right 20px top 20px;}
+}
 #tilt-section{width: 100%;margin: 0px 0 20px 0;
 	#tilt-left{@include float-left;background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/dist/images/tilt-background.jpg');@include background-size(cover);position: relative;display: table;
 		&:before{width: 60px;height: 100%;display: block;content: "";background-color: #fff;position: absolute;right: -28px;top: 0;@include transform(skewX(-7deg) scale(1.1));@include box-shadow(0 0 5px 0 rgba(0,0,0,0.18));@include border-radius(5px);}
