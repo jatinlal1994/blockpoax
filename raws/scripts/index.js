@@ -34,7 +34,7 @@ if(document.getElementById("cancel-request")){document.getElementById("cancel-re
 for (scroller of document.getElementsByClassName('scroll-to')){
 	scroller.onclick = function(){
 		console.log(this.dataset.scrollTo);
-		toHeight = document.getElementById(this.dataset.scrollTo).offsetTop;
+		toHeight = document.getElementById(this.dataset.scrollTo).offsetTop - 47;
 		document.documentElement.scrollTop = toHeight;
 		console.log(toHeight);
 	}
@@ -127,6 +127,13 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+if(document.getElementById("scroll-top")){
+	document.getElementById("scroll-top").onclick = function(){
+		console.log("Clicked on scroll to top");
+		document.documentElement.scrollTop = 0;
+	}
+}
+
 window.onscroll = function(event){
 	var element = document.getElementById("home-secondary-nav");
 	scrollY = document.documentElement.scrollTop;
@@ -135,6 +142,7 @@ window.onscroll = function(event){
 			element.style.display = "block";
 			setTimeout(function(){
 				element.classList.add("show");
+				document.getElementById("scroll-top").classList.remove("hiding");
 			}, 10);
 		}
 	}
@@ -143,6 +151,7 @@ window.onscroll = function(event){
 			element.classList.remove("show");
 			setTimeout(function(){
 				element.style.display = "none";
+				document.getElementById("scroll-top").classList.add("hiding");
 			}, 250);
 		}
 	}
