@@ -34,7 +34,7 @@ if(document.getElementById("cancel-request")){document.getElementById("cancel-re
 for (scroller of document.getElementsByClassName('scroll-to')){
 	scroller.onclick = function(){
 		console.log(this.dataset.scrollTo);
-		toHeight = document.getElementById(this.dataset.scrollTo).offsetTop;
+		toHeight = document.getElementById(this.dataset.scrollTo).offsetTop - 47;
 		document.documentElement.scrollTop = toHeight;
 		console.log(toHeight);
 	}
@@ -114,7 +114,45 @@ if (document.getElementById('success-message')){
 	}, 3000);
 }
 
+window.onload = function(){
+	document.getElementById("preloader-center").classList.add("closing");
+	document.getElementById("preloader").classList.add("closing");
+	element = document.getElementById('preloader');
+	setTimeout(function(){
+		element.parentNode.removeChild(element);
+	}, 500);
+}
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+if(document.getElementById("scroll-top")){
+	document.getElementById("scroll-top").onclick = function(){
+		console.log("Clicked on scroll to top");
+		document.documentElement.scrollTop = 0;
+	}
+}
+
+window.onscroll = function(event){
+	var element = document.getElementById("home-secondary-nav");
+	scrollY = document.documentElement.scrollTop;
+	if(scrollY > 602){
+		if (!element.classList.contains("show")){
+			element.style.display = "block";
+			setTimeout(function(){
+				element.classList.add("show");
+				document.getElementById("scroll-top").classList.remove("hiding");
+			}, 10);
+		}
+	}
+	else{
+		if (element.classList.contains("show")){
+			element.classList.remove("show");
+			setTimeout(function(){
+				element.style.display = "none";
+				document.getElementById("scroll-top").classList.add("hiding");
+			}, 250);
+		}
+	}
 }

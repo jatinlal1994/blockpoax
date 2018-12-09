@@ -4,6 +4,11 @@ from socserv.settings import BASE_DIR
 from django.contrib import messages
 from django.core.mail import send_mail
 
+# Send mail using HTML template
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import get_template
+from django.template import Context
+
 from .models import ProposalRequest, Contact
 
 def home(request):
@@ -70,13 +75,18 @@ def requestQuotation(request):
 		)
 		response.save()
 
-		send_mail(
-		    'Thanks for requesting quotation on Blockpoax',
-		    'Your request has been recorded succesfully, we will get back to you ASAP.',
-		    'admin@blockpoax.com',
-		    ['jatinlal1994@gmail.com'],
-		    fail_silently=False,
-		)
+		plaintext = get_template('mail/blockpoax.txt')
+		htmly = get_template('mail/blockpoax.html')
+
+		d = Context({ 'username': username })
+
+		subject, from_email, to = 'hello', 'from@example.com', 'to@example.com'
+		text_content = plaintext.render(d)
+		html_content = htmly.render(d)
+		msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+		msg.attach_alternative(html_content, "text/html")
+		msg.send()
+
 		messages.add_message(request, messages.INFO, 'We will send you a detailed quotation within next 24 hours')
 		return HttpResponseRedirect('/')
 
