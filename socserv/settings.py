@@ -36,6 +36,12 @@ ROOT_URLCONF = 'socserv.urls'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.privateemail.com'
+EMAIL_HOST_USER = 'admin@blockpoax.com'
+EMAIL_HOST_PASSWORD = 'komalmaurya'
+EMAIL_PORT = 587
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
