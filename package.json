@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "webpack --mode production",
+    "compile": "webpack --mode development",
     "watch": "webpack --watch --mode production"
   },
   "author": "Jatin Lal",

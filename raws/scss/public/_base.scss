@@ -24,7 +24,7 @@ html{scroll-behavior: smooth;}
 
 .container{width: 1130px;margin: 0 auto;}
 
-#nav{
+#nav, #home-secondary-nav{
 	$border-width: 2px;
 	$transition-time: 500ms;
 	#logo{
@@ -371,12 +371,16 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
 	}
 }
 
-#nav{
+#nav, #home-secondary-nav{
 	&.black-nav{background-color: #222;
 		p{color: #fff;}
 		ul li p:after, ul li p:before{background-color: #fff;}
 		ul li p span:after, ul li p span:before{background-color: #fff;}
 	}
+}
+
+#home-secondary-nav{top: 0px;position: fixed;left: 0;width: 100vw;z-index: 8;@include opacity(0);@include transition(250ms);display: none;
+	&.show{@include opacity(1);}
 }
 
 #footer-row{padding: 10px 0 16px 0;
@@ -415,6 +419,105 @@ background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox=
 	p{color: #fff;line-height: 40px;}
 	&.closing{@include translate(0px, -40px);}
 }
+
+#preloader{position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;background-color: #fff;display: table;z-index: 10;@include opacity(1);@include transition(250ms);
+	&.closing{@include opacity(0);}
+	#preloader-vertical{display: table-cell;vertical-align: middle;
+		#preloader-center{text-align: center;@include translateY(0px);@include transition(250ms);
+			&.closing{@include translateY(-20px);}
+			.preloader-brand{font-size: 16px;font-weight: bold;letter-spacing: 1.1px;margin-top: 4px;}
+			.preloader-small{font-size: 11px;}
+		}
+	}
+}
+
+// Preloader
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  margin: -3px 0 0 -3px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// End loader
 
 @media(max-width: 768px){
 	#home-banner{height: unset;

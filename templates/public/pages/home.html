@@ -8,7 +8,20 @@
 
 {% block description %}Blockpoax is an agency that is focussed on ICO promotions, fundraising and global outreach. We provide numerous solutions that are based on Cryptocurrencies.{% endblock %}
 
+{% block styles %}
+<style>#preloader{position:fixed;top:0;left:0;width:100vw;height:100vh;background-color:#fff;display:table;z-index:10;filter:progid:DXImageTransform.Microsoft.Alpha(enabled=false);opacity:1;-moz-transition:250ms;-o-transition:250ms;-webkit-transition:250ms;transition:250ms}#preloader.closing{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0}#preloader #preloader-vertical{display:table-cell;vertical-align:middle}#preloader #preloader-vertical #preloader-center{text-align:center;-moz-transform:translateY(0px);-ms-transform:translateY(0px);-webkit-transform:translateY(0px);transform:translateY(0px);-moz-transition:250ms;-o-transition:250ms;-webkit-transition:250ms;transition:250ms}#preloader #preloader-vertical #preloader-center.closing{-moz-transform:translateY(-20px);-ms-transform:translateY(-20px);-webkit-transform:translateY(-20px);transform:translateY(-20px)}#preloader #preloader-vertical #preloader-center .preloader-brand{font-size:16px;font-weight:bold;letter-spacing:1.1px;margin-top:4px}#preloader #preloader-vertical #preloader-center .preloader-small{font-size:11px}.lds-roller{display:inline-block;position:relative;width:64px;height:64px}.lds-roller div{animation:lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;transform-origin:32px 32px}.lds-roller div:after{content:" ";display:block;position:absolute;width:6px;height:6px;border-radius:50%;background:#000;margin:-3px 0 0 -3px}.lds-roller div:nth-child(1){animation-delay:-0.036s}.lds-roller div:nth-child(1):after{top:50px;left:50px}.lds-roller div:nth-child(2){animation-delay:-0.072s}.lds-roller div:nth-child(2):after{top:54px;left:45px}.lds-roller div:nth-child(3){animation-delay:-0.108s}.lds-roller div:nth-child(3):after{top:57px;left:39px}.lds-roller div:nth-child(4){animation-delay:-0.144s}.lds-roller div:nth-child(4):after{top:58px;left:32px}.lds-roller div:nth-child(5){animation-delay:-0.18s}.lds-roller div:nth-child(5):after{top:57px;left:25px}.lds-roller div:nth-child(6){animation-delay:-0.216s}.lds-roller div:nth-child(6):after{top:54px;left:19px}.lds-roller div:nth-child(7){animation-delay:-0.252s}.lds-roller div:nth-child(7):after{top:50px;left:14px}.lds-roller div:nth-child(8){animation-delay:-0.288s}.lds-roller div:nth-child(8):after{top:45px;left:10px}@keyframes lds-roller{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style>
+{% endblock %}
+
 {% block content %}
+<div id="preloader">
+	<div id="preloader-vertical">
+		<div id="preloader-center">
+			<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			<p class="preloader-brand">Blockpoax</p>
+			<p class="preloader-small">We help you reach out to the mass audience</p>
+		</div>
+	</div>
+</div>
 <div id="home-banner">
 	<div id="home-banner-nav-container">
 		<div id="nav">
@@ -68,6 +81,44 @@
 		<div id="home-banner-image">
 			<div id="home-banner-image-vertical">
 				<img src="{% static 'images/board-meeting.png' %}" alt="meeting-image">
+			</div>
+		</div>
+	</div>
+</div>
+<div id="home-secondary-nav" class="black-nav">
+	<div class="container">
+		<div class="mrow">
+			<div class="left">
+				<div id="logo">
+					<a href="{% url 'home' %}">
+						<img src="{% static 'images/logo.png' %}" alt="logo">
+						<p>Blockpoax</p>
+					</a>
+				</div>
+			</div>
+			<div class="right">
+				<ul>
+					<li>
+						<p class="scroll-to" data-scroll-to="features">
+							<span>Features</span>
+						</p>
+					</li>
+					<li>
+						<p class="scroll-to" data-scroll-to="social-sites">
+							<span>Social Serices</span>
+						</p>
+					</li>
+					<li>
+						<p class="scroll-to" data-scroll-to="tilt-section">
+							<span>Request quotation</span>
+						</p>
+					</li>
+					<li>
+						<p class="scroll-to" data-scroll-to="plans">
+							<span>Plans</span>
+						</p>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -473,12 +524,15 @@
 		</div>
 	</div>
 </div>
-<div id="success-message">
-	{% if messages %}
-	    {% for message in messages %}
-	    <p>{{ message }}</p>
-	    {% endfor %}
-	{% endif %}
-</div>
+{% if messages %}
+	<div id="success-message">
+		    {% for message in messages %}
+		    <p>{{ message }}</p>
+		    {% endfor %}
+	</div>
+{% endif %}
 {% include 'public/components/request-form.html' %}
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}

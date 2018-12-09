@@ -114,7 +114,36 @@ if (document.getElementById('success-message')){
 	}, 3000);
 }
 
+window.onload = function(){
+	document.getElementById("preloader-center").classList.add("closing");
+	document.getElementById("preloader").classList.add("closing");
+	element = document.getElementById('preloader');
+	setTimeout(function(){
+		element.parentNode.removeChild(element);
+	}, 500);
+}
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+window.onscroll = function(event){
+	var element = document.getElementById("home-secondary-nav");
+	scrollY = document.documentElement.scrollTop;
+	if(scrollY > 602){
+		if (!element.classList.contains("show")){
+			element.style.display = "block";
+			setTimeout(function(){
+				element.classList.add("show");
+			}, 10);
+		}
+	}
+	else{
+		if (element.classList.contains("show")){
+			element.classList.remove("show");
+			setTimeout(function(){
+				element.style.display = "none";
+			}, 250);
+		}
+	}
 }
