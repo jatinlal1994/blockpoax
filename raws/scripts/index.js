@@ -20,6 +20,18 @@ if(document.getElementById("start-request")){
 
 if(document.getElementById("close-request-form")){
 	document.getElementById("close-request-form").onclick = function(){
+		console.log("Trying to close customize form");
+		document.getElementById('request-form').classList.remove('opened');
+		setTimeout(function(){
+			document.getElementById('request-form').style.display = 'none';
+		}, 510);
+		document.getElementsByTagName("body")[0].style.overflow = "auto";
+	}
+}
+
+if(document.getElementById("close-customize-form")){
+	document.getElementById("close-customize-form").onclick = function(){
+		console.log("Trying to close customize form");
 		document.getElementById('customize-form').classList.remove('opened');
 		setTimeout(function(){
 			document.getElementById('customize-form').style.display = 'none';
@@ -41,7 +53,7 @@ if(document.getElementById("cancel-request")){
 for (scroller of document.getElementsByClassName('scroll-to')){
 	scroller.onclick = function(){
 		console.log(this.dataset.scrollTo);
-		toHeight = document.getElementById(this.dataset.scrollTo).offsetTop;
+		toHeight = document.getElementById(this.dataset.scrollTo).offsetTop - 47;
 		document.documentElement.scrollTop = toHeight;
 		console.log(toHeight);
 	}
@@ -127,12 +139,18 @@ window.onload = function(){
 	element = document.getElementById('preloader');
 	setTimeout(function(){
 		element.parentNode.removeChild(element);
-		document.getElementById('start-request').click();
 	}, 500);
 }
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+}
+
+if(document.getElementById("scroll-top")){
+	document.getElementById("scroll-top").onclick = function(){
+		console.log("Clicked on scroll to top");
+		document.documentElement.scrollTop = 0;
+	}
 }
 
 window.onscroll = function(event){
@@ -157,34 +175,3 @@ window.onscroll = function(event){
 		}
 	}
 }
-
-if(document.getElementById("scroll-top")){
-	document.getElementById("scroll-top").onclick = function(){
-		console.log("Clicked on scroll to top");
-		document.documentElement.scrollTop = 0;
-	}
-}
-
-
-/*window.onscroll = function(event){
-	var element = document.getElementById("home-secondary-nav");
-	scrollY = document.documentElement.scrollTop;
-	if(scrollY > 602){
-		if (!element.classList.contains("show")){
-			element.style.display = "block";
-			setTimeout(function(){
-				element.classList.add("show");
-				document.getElementById("scroll-top").classList.remove("hiding");
-			}, 10);
-		}
-	}
-	else{
-		if (element.classList.contains("show")){
-			element.classList.remove("show");
-			setTimeout(function(){
-				element.style.display = "none";
-				document.getElementById("scroll-top").classList.add("hiding");
-			}, 250);
-		}
-	}
-}*/
