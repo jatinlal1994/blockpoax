@@ -32,6 +32,9 @@ def contactUs(request):
 def sitemap(request):
 	return render(request, 'sitemap.xml', {}, content_type="application/xhtml+xml")
 
+def placeOrder(request):
+	return render(request, 'public/pages/place-order.html', {})
+
 def requestQuotation(request):
 	if request.method == 'POST':
 		token_name = request.POST.get('token-name')

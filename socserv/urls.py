@@ -7,6 +7,7 @@ urlpatterns = [
     path('blockpoax/', admin.site.urls),
     path('', public.home, name='home'),
     path('api/', include('api.urls')),
+    path('place-order', public.placeOrder, name="place-order"),
     path('request-quotation', public.requestQuotation, name="request-quotation"),
     path('request-contact', public.requestContact, name="request-contact"),
     path('about-us', public.aboutUs, name='about-us'),
