@@ -75,17 +75,17 @@ def requestQuotation(request):
 		)
 		response.save()
 
-		plaintext = get_template('mail/blockpoax.txt')
+		"""plaintext = get_template('mail/blockpoax.txt')
 		htmly = get_template('mail/blockpoax.html')
 
-		d = Context({ 'username': username })
+		d = Context({ 'email': contact_email })
 
-		subject, from_email, to = 'hello', 'from@example.com', 'to@example.com'
+		subject, from_email, to = 'Proposal for our customized package', 'admin@blockpoax.com', contact_email
 		text_content = plaintext.render(d)
 		html_content = htmly.render(d)
 		msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 		msg.attach_alternative(html_content, "text/html")
-		msg.send()
+		msg.send()"""
 
 		messages.add_message(request, messages.INFO, 'We will send you a detailed quotation within next 24 hours')
 		return HttpResponseRedirect('/')
