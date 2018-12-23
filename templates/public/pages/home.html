@@ -70,7 +70,7 @@
 					<div id="home-banner-container">
 						<p class="home-banner-title">Attract <span class="theme-span">Quality</span> Investor Attention</p>
 						<p class="home-banner-p">We have worked with numerous cryptocurrency startups, and have helped them raise funds for their growth. Leave us a message, to discuss how we can help you reach targetted audience.</p>
-						<a href="https://t.me/blockpoax" target="_blank" class="contact-on-telegram">
+						<a href="https://t.me/ngage" target="_blank" class="contact-on-telegram">
 							<svg aria-hidden="true" data-prefix="fab" data-icon="telegram-plane" class="svg-inline--fa fa-telegram-plane fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg>
 							<p>Contact on telegram</p>
 						</a>
@@ -224,12 +224,6 @@
 						<div id="testimonial-words">
 							<p><span class="quote-left"><svg aria-hidden="true" data-prefix="fas" data-icon="quote-left" class="svg-inline--fa fa-quote-left fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span> Publication on 300 Websites having traffic of more than a million and over 2000 websites that publish our stories, you can get the reach to targetted audience, that had always been required for your ICO<span class="quote-right"><svg aria-hidden="true" data-prefix="fas" data-icon="quote-right" class="svg-inline--fa fa-quote-right fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"></path></svg></span></p>
 						</div>
-						<!--<div id="sayer-name">
-							<p>Sam Czertok</p>
-						</div>
-						<div id="sayer-desg">
-							<p>CEO, TokenAI</p>
-						</div>-->
 					</div>
 				</div>
 			</div>
@@ -238,7 +232,7 @@
 			<p id="dual-title">Customised Solution</p>
 			<p id="dual-content">We at Blockpoax work with you throughout your journey. We understand your product, research and find a customised solution for you. </p>
 			<div id="started-button">
-				<p id="start-request">Request proposal</p>
+				<p id="start-request">Design your own package</p>
 			</div>
 
 		</div>
@@ -531,7 +525,11 @@
 		    {% endfor %}
 	</div>
 {% endif %}
+<div id="scroll-top" class="hiding">
+	<i class="fas fa-angle-up"></i>
+</div>
 {% include 'public/components/request-form.html' %}
+{% include 'public/components/customize-form.html' %}
 {% endblock %}
 
 {% block scripts %}

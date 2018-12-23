@@ -1,35 +1,42 @@
-if(document.getElementById("proposal-request-button")){document.getElementById("proposal-request-button").onclick = function(){
-	document.getElementById('request-form').style.display = 'table';
-	setTimeout(function(){
-		document.getElementById('request-form').classList.add('opened');
-	}, 10);
-	document.getElementsByTagName("body")[0].style.overflow = "hidden";
-}}
+if(document.getElementById("proposal-request-button")){
+	document.getElementById("proposal-request-button").onclick = function(){
+		document.getElementById('request-form').style.display = 'table';
+		setTimeout(function(){
+			document.getElementById('request-form').classList.add('opened');
+		}, 10);
+		document.getElementsByTagName("body")[0].style.overflow = "hidden";
+	}
+}
 
 if(document.getElementById("start-request")){
 	document.getElementById("start-request").onclick = function(){
-	document.getElementById('request-form').style.display = 'table';
-	setTimeout(function(){
-		document.getElementById('request-form').classList.add('opened');
-	}, 10);
-	document.getElementsByTagName("body")[0].style.overflow = "hidden";
-}}
+		document.getElementById('customize-form').style.display = 'table';
+		setTimeout(function(){
+			document.getElementById('customize-form').classList.add('opened');
+		}, 10);
+		document.getElementsByTagName("body")[0].style.overflow = "hidden";
+	}
+}
 
-if(document.getElementById("close-request-form")){document.getElementById("close-request-form").onclick = function(){
-	document.getElementById('request-form').classList.remove('opened');
-	setTimeout(function(){
-		document.getElementById('request-form').style.display = 'none';
-	}, 510);
-	document.getElementsByTagName("body")[0].style.overflow = "auto";
-}}
+if(document.getElementById("close-request-form")){
+	document.getElementById("close-request-form").onclick = function(){
+		document.getElementById('customize-form').classList.remove('opened');
+		setTimeout(function(){
+			document.getElementById('customize-form').style.display = 'none';
+		}, 510);
+		document.getElementsByTagName("body")[0].style.overflow = "auto";
+	}
+}
 
-if(document.getElementById("cancel-request")){document.getElementById("cancel-request").onclick = function(){
-	document.getElementById('request-form').classList.remove('opened');
-	setTimeout(function(){
-		document.getElementById('request-form').style.display = 'none';
-	}, 510);
-	document.getElementsByTagName("body")[0].style.overflow = "auto";
-}}
+if(document.getElementById("cancel-request")){
+	document.getElementById("cancel-request").onclick = function(){
+		document.getElementById('customize-form').classList.remove('opened');
+		setTimeout(function(){
+			document.getElementById('customize-form').style.display = 'none';
+		}, 510);
+		document.getElementsByTagName("body")[0].style.overflow = "auto";
+	}
+}
 
 for (scroller of document.getElementsByClassName('scroll-to')){
 	scroller.onclick = function(){
@@ -120,6 +127,7 @@ window.onload = function(){
 	element = document.getElementById('preloader');
 	setTimeout(function(){
 		element.parentNode.removeChild(element);
+		document.getElementById('start-request').click();
 	}, 500);
 }
 function validateEmail(email) {
@@ -135,6 +143,7 @@ window.onscroll = function(event){
 			element.style.display = "block";
 			setTimeout(function(){
 				element.classList.add("show");
+				document.getElementById("scroll-top").classList.remove("hiding");
 			}, 10);
 		}
 	}
@@ -143,7 +152,39 @@ window.onscroll = function(event){
 			element.classList.remove("show");
 			setTimeout(function(){
 				element.style.display = "none";
+				document.getElementById("scroll-top").classList.add("hiding");
 			}, 250);
 		}
 	}
 }
+
+if(document.getElementById("scroll-top")){
+	document.getElementById("scroll-top").onclick = function(){
+		console.log("Clicked on scroll to top");
+		document.documentElement.scrollTop = 0;
+	}
+}
+
+
+/*window.onscroll = function(event){
+	var element = document.getElementById("home-secondary-nav");
+	scrollY = document.documentElement.scrollTop;
+	if(scrollY > 602){
+		if (!element.classList.contains("show")){
+			element.style.display = "block";
+			setTimeout(function(){
+				element.classList.add("show");
+				document.getElementById("scroll-top").classList.remove("hiding");
+			}, 10);
+		}
+	}
+	else{
+		if (element.classList.contains("show")){
+			element.classList.remove("show");
+			setTimeout(function(){
+				element.style.display = "none";
+				document.getElementById("scroll-top").classList.add("hiding");
+			}, 250);
+		}
+	}
+}*/
