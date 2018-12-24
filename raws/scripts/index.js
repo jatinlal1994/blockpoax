@@ -175,3 +175,5 @@ window.onscroll = function(event){
 		}
 	}
 }
+
+console.log("Loaded Blockpoax - v1.0.0");
