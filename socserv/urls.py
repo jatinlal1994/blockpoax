@@ -1,11 +1,12 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from public import views as public
 
 urlpatterns = [
     path('blockpoax/', admin.site.urls),
     path('', public.home, name='home'),
+    path('api/', include('api.urls')),
     path('place-order', public.placeOrder, name="place-order"),
     path('request-quotation', public.requestQuotation, name="request-quotation"),
     path('request-contact', public.requestContact, name="request-contact"),

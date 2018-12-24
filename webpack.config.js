@@ -1,5 +1,5 @@
 const path = require('path');
-//var JavaScriptObfuscator = require('webpack-obfuscator');
+var JavaScriptObfuscator = require('webpack-obfuscator');
 
 module.exports = {
   entry: './raws/index.js',
@@ -8,19 +8,18 @@ module.exports = {
     filename: 'public.js'
   },
   module: {
-        rules: [{
-            test: /\.scss$/,
-            use: [
-                "style-loader",
-                "css-loader",
-                "sass-loader"
-            ]
-        }]
-    }
-  /*,
+    rules: [{
+        test: /\.scss$/,
+        use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader"
+        ]
+    }]
+},
   plugins: [
     new JavaScriptObfuscator ({
       rotateUnicodeArray: true
     })
-  ]*/
+  ]
 };
