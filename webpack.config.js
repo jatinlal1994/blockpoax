@@ -1,11 +1,11 @@
 const path = require('path');
-//var JavaScriptObfuscator = require('webpack-obfuscator');
+var JavaScriptObfuscator = require('webpack-obfuscator');
 
 module.exports = {
   entry: './raws/scripts/index.js',
   output: {
     path: path.resolve(__dirname, 'dist/scripts'),
-    filename: 'public[hash].js'
+    filename: 'public.js'
   },
   module: {
     rules: [{
@@ -16,10 +16,10 @@ module.exports = {
             "sass-loader"
         ]
     }]
-}/*,
+},
   plugins: [
     new JavaScriptObfuscator ({
       rotateUnicodeArray: true
     })
-  ]*/
+  ]
 };

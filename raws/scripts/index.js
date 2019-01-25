@@ -176,4 +176,14 @@ window.onscroll = function(event){
 	}
 }
 
+if (document.getElementById('submit-request')){
+	document.getElementById('submit-request').onclick = function(){
+		document.getElementById('make-payment-modal').style.display = "table";
+		setTimeout(function(){
+			console.log("Trying to open");
+			document.getElementById('make-payment-modal').classList.add('opened');
+		}, 10);
+	}
+}
+
 console.log("Loaded Blockpoax - v1.0.0");
