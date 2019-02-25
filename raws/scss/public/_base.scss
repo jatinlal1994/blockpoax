@@ -474,7 +474,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 #place-order-content{min-height: 200px;width: 400px;}
 
-#our-clients{position: relative;
+#our-clients{position: relative;margin-bottom: 10px;
 	#our-clients-title{
 		p{text-align: center;font-size: 32px;font-weight: bold;margin-top: 22px;color: #333;margin-bottom: 18px;}
 	}
@@ -484,6 +484,26 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 			.logo{padding-top: 10px;background-color: #fff;box-shadow: -2px 2px 5px 0 rgba(0,0,0,0.18);}
 		}
 		&:after{clear: both;display: block;content: ""}
+	}
+}
+
+#p-our-clients{padding: 28px 0 48px 0;background-color: #fff;
+	#our-clients-title{
+		p{text-align: center;font-size: 32px;font-weight: bold;margin-top: 22px;color: #333;margin-bottom: 18px;}
+	}
+	.clients{
+		.client{float: left;width: 16.66%;
+			.logo{width: 100%;text-align: center;
+				&.geeba{
+					img{height: unset;width: calc(100% - 40px);}
+				}
+				&.happy{img{height: 58px;}}
+				&.uzoma{img{height: 58px;}}
+				&.revain{img{height: 52px;}}
+			}
+			img{height: 40px;}
+		}
+		&:after{clear: both;display: block;content: "";}
 	}
 }
 
@@ -602,6 +622,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 	#nav, #home-secondary-nav{
 		.right{display: none;}
 	}
+	#p-our-clients .clients .client .logo{width: 50%;}
 	#request-form #request-form-container{padding-top: 40px;}
 	#home-banner #home-banner-content{}
 	#home-banner #home-banner-content{padding-top: 40px;}
