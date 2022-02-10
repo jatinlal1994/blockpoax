@@ -20,7 +20,7 @@
   "dependencies": {
     "child_process": "^1.0.2",
     "compass": "^0.1.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "npm": "^6.4.1",
     "particles.js": "^2.0.0",
     "particlesjs": "^2.2.3",
